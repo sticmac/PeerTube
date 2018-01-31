@@ -42,11 +42,11 @@ export class VideoService {
   }
 
   updateVideo (video: VideoEdit) {
-    const language = video.language || undefined
-    const licence = video.licence || undefined
-    const category = video.category || undefined
-    const description = video.description || undefined
-    const thumbnail = video.thumbnail || undefined
+    const language = video.language || null
+    const licence = video.licence || null
+    const category = video.category || null
+    const description = video.description || null
+    const thumbnail = video.thumbnail || null
 
     const body: VideoUpdate = {
       name: video.name,
