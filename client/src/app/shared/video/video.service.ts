@@ -46,6 +46,7 @@ export class VideoService {
     const licence = video.licence || undefined
     const category = video.category || undefined
     const description = video.description || undefined
+    const thumbnail = video.thumbnail || undefined
 
     const body: VideoUpdate = {
       name: video.name,
@@ -53,6 +54,7 @@ export class VideoService {
       licence,
       language,
       description,
+      thumbnail,
       privacy: video.privacy,
       tags: video.tags,
       nsfw: video.nsfw,

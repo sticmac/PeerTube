@@ -13,7 +13,8 @@ import {
   VIDEO_LICENCE,
   VIDEO_NAME,
   VIDEO_PRIVACY,
-  VIDEO_TAGS
+  VIDEO_TAGS,
+  VIDEO_THUMBNAIL
 } from '../../../shared/forms/form-validators/video'
 import { VideoEdit } from '../../../shared/video/video-edit.model'
 
@@ -57,6 +58,7 @@ export class VideoEditComponent implements OnInit {
     this.formErrors['licence'] = ''
     this.formErrors['language'] = ''
     this.formErrors['description'] = ''
+    this.formErrors['thumbnail'] = ''
 
     this.validationMessages['name'] = VIDEO_NAME.MESSAGES
     this.validationMessages['privacy'] = VIDEO_PRIVACY.MESSAGES
@@ -65,6 +67,7 @@ export class VideoEditComponent implements OnInit {
     this.validationMessages['licence'] = VIDEO_LICENCE.MESSAGES
     this.validationMessages['language'] = VIDEO_LANGUAGE.MESSAGES
     this.validationMessages['description'] = VIDEO_DESCRIPTION.MESSAGES
+    this.validationMessages['thumbnail'] = VIDEO_THUMBNAIL.MESSAGES
 
     this.form.addControl('name', new FormControl('', VIDEO_NAME.VALIDATORS))
     this.form.addControl('privacy', new FormControl('', VIDEO_PRIVACY.VALIDATORS))
@@ -76,6 +79,7 @@ export class VideoEditComponent implements OnInit {
     this.form.addControl('language', new FormControl('', VIDEO_LANGUAGE.VALIDATORS))
     this.form.addControl('description', new FormControl('', VIDEO_DESCRIPTION.VALIDATORS))
     this.form.addControl('tags', new FormControl(''))
+    this.form.addControl('thumbnail', new FormControl(''))
   }
 
   ngOnInit () {

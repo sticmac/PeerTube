@@ -18,6 +18,11 @@
     </div>
 
     <div class="form-group">
+      <label for="thumbnailfile">Thumbnail</label>
+      <input #thumbnailfileInput type="file" name="thumbnailfile" id="thumbnailfile" formControlName="thumbnail" [accept]="imageExtensions"/>
+    </div>
+
+    <div class="form-group">
       <label for="description">Description</label>
       <my-video-description formControlName="description"></my-video-description>
 

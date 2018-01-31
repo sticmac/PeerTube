@@ -53,3 +53,8 @@ export const VIDEO_TAGS = {
     'maxlength': 'A tag should be less than 30 characters long.'
   }
 }
+
+export const VIDEO_THUMBNAIL = {
+  VALIDATORS: [ ],
+  MESSAGES: {}
+}

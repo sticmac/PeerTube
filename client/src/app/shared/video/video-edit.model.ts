@@ -6,6 +6,7 @@ export class VideoEdit {
   licence: number
   language: number
   description: string
+  thumbnail: any
   name: string
   tags: string[]
   nsfw: boolean
@@ -23,6 +24,7 @@ export class VideoEdit {
       this.licence = videoDetails.licence
       this.language = videoDetails.language
       this.description = videoDetails.description
+      this.thumbnail = videoDetails.thumbnail
       this.name = videoDetails.name
       this.tags = videoDetails.tags
       this.nsfw = videoDetails.nsfw
@@ -44,6 +46,7 @@ export class VideoEdit {
       licence: this.licence,
       language: this.language,
       description: this.description,
+      thumbnail: this.thumbnail,
       name: this.name,
       tags: this.tags,
       nsfw: this.nsfw,
